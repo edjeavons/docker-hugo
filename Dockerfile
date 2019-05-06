@@ -25,7 +25,6 @@ RUN apk del curl \
     && rm -rf /var/cache/apk/* /tmp/*
 
 # Environment settings
-ENTRYPOINT ["hugo"]
 EXPOSE 1313
 USER hugo
 VOLUME  ["/hugo"]
