@@ -16,9 +16,7 @@ RUN addgroup -g 1000 -S hugo \
 RUN curl -o /tmp/hugo.tar.gz -SL https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz \
     && tar xzf /tmp/hugo.tar.gz -C /tmp/ \
     && ls -l /tmp \
-    && mv /tmp/hugo /usr/local/bin/hugo \
-    && ls -l /usr/local/bin \
-    && echo $PATH
+    && mv /tmp/hugo /usr/local/bin/hugo
 
 # Cleanup 
 RUN apk del curl \
