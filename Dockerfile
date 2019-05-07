@@ -4,7 +4,7 @@ ARG HUGO_VERSION=0.55.5
 
 # Prepare OS
 RUN addgroup -g 1000 -S hugo && adduser -u 1000 -G hugo -h /hugo -D hugo 
-RUN apk add rsync
+RUN apk add openssh-client rsync
 
 # Install Hugo
 ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz /tmp/hugo.tar.gz
